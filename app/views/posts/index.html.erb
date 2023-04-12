@@ -1,1 +1,13 @@
-<h1>Here is a list of posts for a given user</h1>
+<%= render 'shared/user_container', user: @user_x %>
+
+<% @posts.each do |post| %>
+	<%= render 'shared/post_container', post: post %>
+
+	<div class="all-comms">
+		<% post.recent_comments.each do |comment| %>
+			<p><%= comment.user.name%>: <%= comment.text %></p>
+		<% end %>
+	</div>
+<% end %>
+
+<button class="posts-btn">Pagination</button>
