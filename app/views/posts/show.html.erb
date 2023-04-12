@@ -1,16 +1,16 @@
 <div class="post-cont">
 	<div class="post-cont-header">
-		<h3><%= @postX.title %> by <%= @userX.name %></h3>
+		<h3><%= @post_x.title %> by <%= @user_x.name %></h3>
 		<div class="post-comments">
-      <p>Comments: <%= @postX.comments_counter %></p>
-      <p>Likes: <%= @postX.likes_counter %></p>
+      <p>Comments: <%= @post_x.comments_counter %></p>
+      <p>Likes: <%= @post_x.likes_counter %></p>
   	</div>
 	</div>
-	<p><%= @postX.text %></p>
+	<p><%= @post_x.text %></p>
 </div>
 
 <div class="comments-box">
-  <% comments = Comment.where(post_id: @postX.id) %>
+  <% comments = Comment.where(post_id: @post_x.id) %>
   <% comments.each do |comment| %>
     <% user = User.find_by(id: comment.user_id).name %>
     <p><strong><%= user %>: <%= comment.text %></strong></p>
