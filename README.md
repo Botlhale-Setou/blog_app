@@ -68,7 +68,9 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo Not Available
+## 🚀 Live Demo
+
+The live demo link is currently unavailable.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
