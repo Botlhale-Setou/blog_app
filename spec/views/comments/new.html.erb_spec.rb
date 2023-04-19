@@ -18,7 +18,7 @@ RSpec.describe 'Create Comment', type: :feature do
     click_button 'Post Comment'
 
     # Expect to be redirected to the post
-    
+
     # Expect to see the new comment's text
     expect(page).to have_content('This is my first comment on the post.')
   end
