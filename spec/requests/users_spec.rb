@@ -14,17 +14,13 @@ RSpec.describe 'Users', type: :request do
     it 'should return index' do
       expect(response).to render_template(:index)
     end
-
-    it 'should include correct placeholder' do
-      expect(response.body).to include('Here are the lists of users')
-    end
   end
 
   describe 'GET /show' do
     before :each do
       @user = User.create(
         name: 'Botlhale',
-        photo: 'MyPicture.jpg',
+        photo: 'https://randomuser.me/api/portraits/men/1.jpg',
         bio: 'Full-Stack Software Engineer',
         posts_counter: 1
       )
@@ -37,10 +33,6 @@ RSpec.describe 'Users', type: :request do
 
     it 'should return show' do
       expect(response).to render_template(:show)
-    end
-
-    it 'should include correct placeholder' do
-      expect(response.body).to include('Here is a single user')
     end
   end
 end

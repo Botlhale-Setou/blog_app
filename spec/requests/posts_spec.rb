@@ -5,7 +5,7 @@ RSpec.describe 'Posts', type: :request do
     before :each do
       @user = User.create(
         name: 'Rick',
-        photo: 'RickPhoto.jpg',
+        photo: 'https://randomuser.me/api/portraits/men/1.jpg',
         bio: 'Mortys awesome grandfather!',
         posts_counter: 1
       )
@@ -17,10 +17,6 @@ RSpec.describe 'Posts', type: :request do
     end
     it 'should render the index action' do
       expect(response).to render_template(:index)
-    end
-
-    it 'should include the correct placeholder' do
-      expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
 
@@ -48,10 +44,6 @@ RSpec.describe 'Posts', type: :request do
 
     it 'should render the show action' do
       expect(response).to render_template(:show)
-    end
-
-    it 'should include the correct placeholder' do
-      expect(response.body).to match('Here is a single post for a given user')
     end
   end
 end
