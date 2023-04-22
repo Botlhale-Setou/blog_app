@@ -70,3 +70,26 @@
   margin: 0 2.5vw;
   outline: 2px solid gray;
 }
+
+.main1 {
+  text-align: center;
+  margin: auto;
+}
+
+.main2 {
+  text-align: center;
+  margin: auto;
+}
+
+input {
+  width: 40%;
+}
+
+#user_remember_me {
+  width: auto;
+}
+
+.img-user {
+  width: 120px;
+  height: 120px;
+}
